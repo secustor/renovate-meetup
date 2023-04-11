@@ -8,4 +8,4 @@ image:
   repository: docker.io/renovate/renovate
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "34.159.0"
+  tag: "34.160.0"
