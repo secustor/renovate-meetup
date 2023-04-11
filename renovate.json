@@ -2,5 +2,21 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base"
+  ],
+  "osvVulnerabilityAlerts": true,
+  "packageRules": [
+    {
+      "description": "Replace Dockerhub with ghcr.io for renovate",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["docker.io/renovate/renovate"],
+      "replacementName": "ghcr.io/renovatebot/renovate"
+    }
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["^README.md$"],
+      "matchStrings": ["(?<depName>[\\w/\\.]+):(?<currentValue>[^\\s]+)"],
+      "datasourceTemplate": "docker"
+    }
   ]
 }
