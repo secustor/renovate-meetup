@@ -5,6 +5,7 @@
   ],
   "osvVulnerabilityAlerts": true,
   "dependencyDashboardOSVVulnerabilitySummary": "all",
+  "addLabels": ["{{{manager}}}"],
   "packageRules": [
     {
       "description": "Replace Dockerhub with ghcr.io for renovate",
