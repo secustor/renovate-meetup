@@ -13,6 +13,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY --from=osv osv-scanner /usr/local/bin
 
 # renovate: datasource=github-releases depName=aquasecurity/trivy extractVersion=true
-ARG TRIVY_VERSION=0.40.0
+ARG TRIVY_VERSION=0.41.0
 RUN wget -c https://github.com/aquasecurity/trivy/releases/download/v${TRIVY_VERSION}/trivy_${TRIVY_VERSION}_Linux-64Bit.tar.gz -O - | \
         tar -xzC /usr/local/bin trivy
