@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: docker.io/renovate/renovate
+  repository: ghcr.io/renovatebot/renovate
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "35.40.0"
