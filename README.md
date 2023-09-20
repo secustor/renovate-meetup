@@ -6,7 +6,7 @@ This repository contains a demo used to showcase capabilities of Renovate on Mee
 ### Usage
 Fork this repo to your space, adapt the environment variables below, then run it: 
 ```bash
-docker run --rm -e RENOVATE_REPOSITORIES='["secustor/renovate-meetup"]' RENOVATE_TOKEN="******" docker.io/renovate/renovate:35.40.0
+docker run --rm -e RENOVATE_REPOSITORIES='["secustor/renovate-meetup"]' RENOVATE_TOKEN="******" docker.io/renovate/renovate:36.97.3
 ```
 
 ### Presentation 
