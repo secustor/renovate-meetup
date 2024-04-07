@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: renovate-meetup-npm
+  description: An example for Renovate which has been used at a Meetup
+spec:
+  type: demo
+  lifecycle: production
+  owner: secustor
+  subcomponentOf: renovate-meetup
