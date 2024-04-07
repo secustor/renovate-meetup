@@ -3,6 +3,8 @@ kind: Component
 metadata:
   name: renovate-meetup-npm
   description: An example for Renovate which has been used at a Meetup
+  annotations:
+    renovate.secustor.dev/keep-updated: enabled
 spec:
   type: demo
   lifecycle: production
