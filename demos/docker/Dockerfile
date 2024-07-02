@@ -1,6 +1,6 @@
 FROM ghcr.io/google/osv-scanner:v1.3.1 as osv
 
-FROM node:20-slim@sha256:80c3e9753fed11eee3021b96497ba95fe15e5a1dfc16aaf5bc66025f369e00dd
+FROM node:20-slim@sha256:d71e0d460434ef500c6d962bcdc6ebe717e5939025dd8aa9746dd76fa12ee6e3
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
   wget \
