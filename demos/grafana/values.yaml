@@ -1,0 +1,12 @@
+dashboards:
+  default:
+    1860-node-exporter-full:
+      # renovate: depName="Node Exporter Full"
+      gnetId: 1860
+      revision: 31
+      datasource: Prometheus
+    15760-kubernetes-views-pods:
+      # renovate: depName="Kubernetes / Views / Pods"
+      gnetId: 15760
+      revision: 20
+      datasource: Prometheus

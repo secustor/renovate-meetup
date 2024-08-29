@@ -15,12 +15,28 @@
       "replacementName": "ghcr.io/renovatebot/renovate"
     }
   ],
+  "customDatasources": {
+    "grafana-dashboards": {
+      "defaultRegistryUrlTemplate": "https://grafana.com/api/dashboards/{{packageName}}",
+      "format": "json",
+      "transformTemplates": [
+        "{\"releases\":[{\"version\": $string(revision)}]}"
+      ]
+    }
+  },
   "customManagers": [
     {
       "customType": "regex",
       "fileMatch": ["^README.md$"],
       "matchStrings": ["(?<depName>[\\w/\\.]+):(?<currentValue>[^\\s]+)"],
       "datasourceTemplate": "docker"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["grafana/values\\.ya?ml$"],
+      "matchStrings": ["#\\s+renovate:\\s+depName=\"(?<depName>.*)\"\\n\\s+gnetId:\\s+(?<packageName>.*?)\\n\\s+revision:\\s+(?<currentValue>.*)"],
+      "versioningTemplate": "regex:^(?<major>\\d+)$",
+      "datasourceTemplate": "custom.grafana-dashboards"
     },
     {
       "customType": "regex",
