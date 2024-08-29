@@ -15,13 +15,15 @@
       "replacementName": "ghcr.io/renovatebot/renovate"
     }
   ],
-  "regexManagers": [
+  "customManagers": [
     {
+      "customType": "regex",
       "fileMatch": ["^README.md$"],
       "matchStrings": ["(?<depName>[\\w/\\.]+):(?<currentValue>[^\\s]+)"],
       "datasourceTemplate": "docker"
     },
     {
+      "customType": "regex",
       "fileMatch": ["(^|/)Dockerfile$"],
       "matchStrings": [
         "renovate: datasource=(?<datasource>.*?) depName=(?<depName>\\S*)( versioning=(?<versioning>.*?))?( extractVersion=(?<extractVersion>.*?))?\\nARG .*?_VERSION=(?<currentValue>.*)\\s"
