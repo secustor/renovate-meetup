@@ -1,6 +1,7 @@
 {
   "matchPackageNames": [
     "virtualenv",
+    "tox-pdm",
     "unearth"
   ]
 }

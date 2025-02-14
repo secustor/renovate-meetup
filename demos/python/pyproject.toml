@@ -32,6 +32,6 @@ test = [
 ]
 tox = [
   "tox",
-  "tox-pdm>=0.5",
+  "tox-pdm==0.5",
   "", # fail to parse
 ]
