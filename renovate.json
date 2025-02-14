@@ -24,7 +24,7 @@
     {
       "description": "Extend local preset selectors",
       "extends": [
-        "github>secustor/renovate-meetup//renovate/groups/foo"
+        "github>secustor/renovate-meetup//.github/renovate/groups/foo"
       ],
       "groupName": "foo"
     }
