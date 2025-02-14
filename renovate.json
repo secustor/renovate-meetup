@@ -6,13 +6,27 @@
   ],
   "osvVulnerabilityAlerts": true,
   "dependencyDashboardOSVVulnerabilitySummary": "all",
-  "addLabels": ["renovate","{{{manager}}}"],
+  "addLabels": [
+    "renovate",
+    "{{{manager}}}"
+  ],
   "packageRules": [
     {
       "description": "Replace Dockerhub with ghcr.io for renovate",
-      "matchDatasources": ["docker"],
-      "matchPackageNames": ["docker.io/renovate/renovate"],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "docker.io/renovate/renovate"
+      ],
       "replacementName": "ghcr.io/renovatebot/renovate"
+    },
+    {
+      "description": "Extend local preset selectors",
+      "extends": [
+        "github>secustor/renovate-meetup//renovate/groups/foo"
+      ],
+      "groupName": "foo"
     }
   ],
   "customDatasources": {
@@ -27,20 +41,30 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["^README.md$"],
-      "matchStrings": ["(?<depName>[\\w/\\.]+):(?<currentValue>[^\\s]+)"],
+      "fileMatch": [
+        "^README.md$"
+      ],
+      "matchStrings": [
+        "(?<depName>[\\w/\\.]+):(?<currentValue>[^\\s]+)"
+      ],
       "datasourceTemplate": "docker"
     },
     {
       "customType": "regex",
-      "fileMatch": ["grafana/values\\.ya?ml$"],
-      "matchStrings": ["#\\s+renovate:\\s+depName=\"(?<depName>.*)\"\\n\\s+gnetId:\\s+(?<packageName>.*?)\\n\\s+revision:\\s+(?<currentValue>.*)"],
+      "fileMatch": [
+        "grafana/values\\.ya?ml$"
+      ],
+      "matchStrings": [
+        "#\\s+renovate:\\s+depName=\"(?<depName>.*)\"\\n\\s+gnetId:\\s+(?<packageName>.*?)\\n\\s+revision:\\s+(?<currentValue>.*)"
+      ],
       "versioningTemplate": "regex:^(?<major>\\d+)$",
       "datasourceTemplate": "custom.grafana-dashboards"
     },
     {
       "customType": "regex",
-      "fileMatch": ["(^|/)Dockerfile$"],
+      "fileMatch": [
+        "(^|/)Dockerfile$"
+      ],
       "matchStrings": [
         "renovate: datasource=(?<datasource>.*?) depName=(?<depName>\\S*)( versioning=(?<versioning>.*?))?( extractVersion=(?<extractVersion>.*?))?\\nARG .*?_VERSION=(?<currentValue>.*)\\s"
       ],
