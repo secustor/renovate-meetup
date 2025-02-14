@@ -8,5 +8,5 @@ dashboards:
     15760-kubernetes-views-pods:
       # renovate: depName="Kubernetes / Views / Pods"
       gnetId: 15760
-      revision: 20
+      revision: 36
       datasource: Prometheus
