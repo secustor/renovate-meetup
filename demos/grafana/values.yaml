@@ -2,8 +2,8 @@ dashboards:
   default:
     1860-node-exporter-full:
       # renovate: depName="Node Exporter Full"
-      gnetId: 1860
-      revision: 18
+      gnetId: 3760
+      revision: 37
       datasource: Prometheus
     15760-kubernetes-views-pods:
       # renovate: depName="Kubernetes / Views / Pods"
