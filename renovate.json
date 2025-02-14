@@ -4,6 +4,10 @@
     "config:base",
     "security:openssf-scorecard"
   ],
+
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0,
+
   "osvVulnerabilityAlerts": true,
   "dependencyDashboardOSVVulnerabilitySummary": "all",
   "addLabels": [
